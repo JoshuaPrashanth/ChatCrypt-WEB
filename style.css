@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+html, body{
+    overflow: hidden;
+}
+.main_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(1, 7, 35);
+}
+img {
+    position: absolute;
+    top: 0;
+    height: 150px;
+}
+
+.parent_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+textarea {
+    height: 260px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    /* margin: 10px; */
+    transition: 0.3s;
+    outline: none;
+    border: 2px solid transparent;
+    resize: none;
+    overflow: hidden;
+}
+#input {
+    margin-right: 5px;
+}
+#output {
+    margin-left: 5px;
+}
+textarea.typing {
+    box-shadow: 0 0 18px 10px rgb(0, 208, 255);
+}
+
+textarea::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.copy_button {
+    height: 50px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: rgba(0, 208, 255, 0.4);
+    color: white;
+    border: none;
+    font-size: 15px;
+    transition: 0.3s ease-in;
+    margin-top: 18px;
+}
+.copy_button:hover {
+    background-color: rgb(0, 208, 255);
+}
+.button_container {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.same {
+    height: 50px;
+    width: 30%;
+    border-radius: 5px;
+    background-color: rgba(0, 208, 255, 0.21);
+    border: none;
+    color: white;
+    transition: 0.3s ease-in;
+}
+.same:hover {
+    background-color: rgb(0, 208, 255);
+}
+p {
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.31);
+}
+
+/* ---------Responsiveness------------- */
+@media screen and (max-width: 760px){
+    html {
+        overflow-y: scroll;
+    }
+    .parent_container{
+        flex-direction: column;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 300px;
+    }
+    textarea {
+        height: 80%;
+        width: 90%;
+    }
+    #input {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    #output {
+        margin: 0;
+        margin-top: 5px;
+    }
+    .copy_button {
+        width: 90vw;
+    }
+    .button_container {
+        flex-direction: column;
+    }
+    .same {
+        width: 90vw;
+        margin: 5px;
+    }
+    img {
+        position: relative;
+        top: 0;
+        height: 120px;
+    }
+    p {
+        position: relative;
+        bottom: 0;
+    }
+}
